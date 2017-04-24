@@ -10,9 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var label: UILabel!
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    label.isHidden = true
   }
 
   override func didReceiveMemoryWarning() {
@@ -20,6 +22,14 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
+  @IBAction func touchInside(_ sender: UIButton) {
+    print("inside")
+    label.isHidden = true
+  }
 
+  @IBAction func touchDown(_ sender: Any) {
+    print("touch down")
+    label.isHidden = false
+  }
 }
 
